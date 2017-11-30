@@ -73,8 +73,8 @@ namespace iTextSharp.text.pdf.parser {
             this.refi = refi;
             this.inlineImageInfo = null;
             this.colorSpaceDictionary = colorSpaceDictionary;
-            this.markedContentInfos = new List<MarkedContentInfo>();
-            if (markedContentInfos.Count > 0) { // check for performance purposes, as markedContentInfo.GetEnumerator is a costly operation for some reason
+            this.markedContentInfos = new List<MarkedContentInfo>();            
+            if (markedContentInfos?.Count > 0) { // check for performance purposes, as markedContentInfo.GetEnumerator is a costly operation for some reason
                 foreach (MarkedContentInfo m in markedContentInfos) {
                     this.markedContentInfos.Add(m);
                 }
